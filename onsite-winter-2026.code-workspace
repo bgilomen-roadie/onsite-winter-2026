@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": ".",
+      "folders": [
+        {
+          "name": "React App",
+          "path": "./react-app",
+        },
+        {
+          "name": "Rails API",
+          "path": "rails-api",
+        },
+      ],
+    },
+  ],
+  "settings": {},
+}

@@ -1,16 +1,21 @@
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+  username: <%= ENV.fetch("POSTGRES_USER") { "postgres" } %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { "" } %>
+  host: <%= ENV.fetch("POSTGRES_HOST") { "localhost" } %>
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: books_api_development
 
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: books_api_test
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: books_api_production
+  username: <%= ENV["BOOKS_API_DATABASE_USERNAME"] %>
+  password: <%= ENV["BOOKS_API_DATABASE_PASSWORD"] %>
