@@ -5,8 +5,8 @@ React frontend for the Book Library workshop.
 ## Quick Start
 
 ```bash
-yarn install
-yarn run dev
+npm install
+npm run dev
 ```
 
 The app will run on `http://localhost:5173`
@@ -33,7 +33,6 @@ src/
 ## Key Concepts Demonstrated
 
 ### 1. Custom Hooks
-
 ```typescript
 // hooks/useFetch.ts
 export function useFetch<T>(url: string) {
@@ -50,10 +49,9 @@ export function useFetch<T>(url: string) {
 ```
 
 ### 2. Component Composition
-
 ```typescript
 // Small, focused components
-<FilterBar
+<FilterBar 
   genres={genres}
   selectedGenre={selectedGenre}
   onGenreChange={setSelectedGenre}
@@ -65,34 +63,30 @@ export function useFetch<T>(url: string) {
 ```
 
 ### 3. Client-Side Filtering
-
 ```typescript
 // No server request needed!
 const filteredBooks = useMemo(() => {
   if (!selectedGenre) return books;
-  return books.filter((book) => book.genre === selectedGenre);
+  return books.filter(book => book.genre === selectedGenre);
 }, [books, selectedGenre]);
 ```
 
 ## Development
 
 ### Running the App
-
 ```bash
 npm run dev
 ```
 
 ### Building for Production
-
 ```bash
 npm run build
 npm run preview
 ```
 
 ### Type Checking
-
 ```bash
-yarn tsc --noEmit
+npx tsc --noEmit
 ```
 
 ## Environment

@@ -9,8 +9,8 @@ Make sure you have installed:
 - **Ruby** 3.0 or higher
 - **Rails** 7.0 or higher
 - **PostgreSQL** 14 or higher
-- **Node.js** 18 or higher
-- **npm** 9 or higher
+- **Node.js** 22.9.0 or higher
+- **yarn** 1.22.22
 - **Git** (for version control)
 - **Code editor** (VS Code, Cursor, etc.)
 
@@ -20,8 +20,8 @@ Make sure you have installed:
 ruby --version    # Should be 3.0+
 rails --version   # Should be 7.0+
 psql --version    # Should be 14+
-node --version    # Should be 18+
-npm --version     # Should be 9+
+node --version    # Should be 22.9.0+
+yarn --version     # Should be 1.22.22
 ```
 
 ## Step 1: Download the Workshop Materials
@@ -48,6 +48,7 @@ bundle install
 ```
 
 If you don't have bundler:
+
 ```bash
 gem install bundler
 bundle install
@@ -82,6 +83,7 @@ rails server -p 3001
 Open your browser to `http://localhost:3001/api/books`
 
 You should see JSON data with books:
+
 ```json
 [
   {"id":1,"title":"The Pragmatic Programmer","author":"Hunt & Thomas","genre":"Technical","year":1999},
@@ -145,12 +147,14 @@ Then open `http://localhost:8000` in your browser.
 ### Rails API Issues
 
 #### "Could not find gem 'rails'"
+
 ```bash
 gem install rails
 bundle install
 ```
 
 #### PostgreSQL connection errors
+
 ```bash
 # Make sure PostgreSQL is running
 # macOS (Homebrew):
@@ -164,18 +168,21 @@ psql -U postgres -c "SELECT 1"
 ```
 
 #### Database errors
+
 ```bash
 # Drop and recreate
 rails db:drop db:create db:migrate db:seed
 ```
 
 #### "Role 'postgres' does not exist"
+
 ```bash
 # Create the postgres superuser
 createuser -s postgres
 ```
 
 #### Port 3001 already in use
+
 ```bash
 # Find and kill the process
 lsof -ti:3001 | xargs kill -9
@@ -188,17 +195,20 @@ rails server -p 3002
 ### React App Issues
 
 #### "Cannot find module 'react'"
+
 ```bash
 rm -rf node_modules package-lock.json
 npm install
 ```
 
 #### API connection errors
+
 1. Verify Rails is running on port 3001
 2. Check the Rails console for CORS errors
 3. Verify proxy settings in `vite.config.ts`
 
 #### Port 5173 already in use
+
 ```bash
 # Vite will automatically try the next available port
 # Or specify a different port
@@ -208,7 +218,9 @@ npm run dev -- --port 5174
 ### Presentation Issues
 
 #### Reveal.js not loading
+
 Use the Python HTTP server method:
+
 ```bash
 python3 -m http.server 8000
 ```

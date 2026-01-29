@@ -37,7 +37,6 @@ Or create a `.env` file in the project root.
 ## Endpoints
 
 ### GET /api/books
-
 Returns all books.
 
 ```json
@@ -53,15 +52,12 @@ Returns all books.
 ```
 
 ### GET /api/books?genre=Technical
-
 Filter books by genre.
 
 ### GET /api/books/:id
-
 Get a single book.
 
 ### GET /api/genres
-
 Get list of unique genres.
 
 ```json

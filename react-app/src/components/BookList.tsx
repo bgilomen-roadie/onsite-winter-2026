@@ -1,54 +1,42 @@
 import { useState, useMemo } from 'react';
 import { useFetch } from '../hooks/useFetch';
+import { useBookSearch } from '../hooks/useBookSearch';
 import { Book } from '../types/Book';
 import { BookCard } from './BookCard';
 import { FilterBar } from './FilterBar';
+import { SearchBar } from './SearchBar';
 
 /**
  * BookList Component
  * 
- * This is like a Rails controller action + view combined.
+ * This component demonstrates using multiple custom hooks together:
+ * - useFetch: Handles data fetching from the API
+ * - useBookSearch: Handles search state and filtering
  * 
- * Rails equivalent:
- * 
- * class BooksController < ApplicationController
- *   def index
- *     @books = Book.all
- *     @genres = Book.distinct.pluck(:genre)
- *     @selected_genre = params[:genre]
- *     @filtered_books = @selected_genre ? @books.where(genre: @selected_genre) : @books
- *   end
- * end
- * 
- * Key differences:
- * 1. Data fetching happens AFTER initial render (useEffect)
- * 2. State lives in the component (useState), not request/session
- * 3. Filtering is instant - no HTTP request needed (useMemo)
+ * Plus local state for genre filtering with useMemo.
  */
 export function BookList() {
-  // Custom hook for data fetching - like a service object
+  // Data fetching via custom hook
   const { data: books, loading, error } = useFetch<Book[]>('/api/books');
   
-  // Local state for filter - like params[:genre] but persists across renders
+  // Search functionality via custom hook
+  const { query, setQuery, results: searchResults, isSearching } = useBookSearch(books);
+  
+  // Genre filter state
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
 
   // Extract unique genres from books
-  // useMemo caches this calculation - only recalculates when books change
   const genres = useMemo(() => {
     if (!books) return [];
     return [...new Set(books.map(book => book.genre))].sort();
   }, [books]);
 
-  // Filter books by selected genre
-  // This is CLIENT-SIDE filtering - no HTTP request needed!
-  // In Rails, this would require a new page load
+  // Apply genre filter to search results
   const filteredBooks = useMemo(() => {
-    if (!books) return [];
-    if (!selectedGenre) return books;
-    return books.filter(book => book.genre === selectedGenre);
-  }, [books, selectedGenre]);
+    if (!selectedGenre) return searchResults;
+    return searchResults.filter(book => book.genre === selectedGenre);
+  }, [searchResults, selectedGenre]);
 
-  // Handle loading state
   if (loading) {
     return (
       <div className="loading">
@@ -58,7 +46,6 @@ export function BookList() {
     );
   }
 
-  // Handle error state
   if (error) {
     return (
       <div className="error">
@@ -68,7 +55,6 @@ export function BookList() {
     );
   }
 
-  // Handle empty state
   if (!books || books.length === 0) {
     return (
       <div className="empty">
@@ -77,9 +63,16 @@ export function BookList() {
     );
   }
 
-  // Main render - composition of smaller components
   return (
     <div>
+      <SearchBar
+        query={query}
+        onQueryChange={setQuery}
+        resultCount={filteredBooks.length}
+        totalCount={books.length}
+        isSearching={isSearching || selectedGenre !== null}
+      />
+      
       <FilterBar
         genres={genres}
         selectedGenre={selectedGenre}
@@ -88,13 +81,21 @@ export function BookList() {
       
       <div className="stats">
         Showing {filteredBooks.length} of {books.length} books
+        {isSearching && ` matching "${query}"`}
+        {selectedGenre && ` in ${selectedGenre}`}
       </div>
       
-      <div className="book-grid">
-        {filteredBooks.map((book) => (
-          <BookCard key={book.id} book={book} />
-        ))}
-      </div>
+      {filteredBooks.length === 0 ? (
+        <div className="empty">
+          <p>No books match your search criteria.</p>
+        </div>
+      ) : (
+        <div className="book-grid">
+          {filteredBooks.map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,339 @@
+  [1m[35m (728.3ms)[0m  [1m[35mCREATE DATABASE "books_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (335.6ms)[0m  [1m[35mCREATE DATABASE "books_api_test" ENCODING = 'unicode'[0m
+Started GET "/api/books" for ::1 at 2026-01-29 10:17:18 -0500
+Started GET "/api/books" for ::1 at 2026-01-29 10:17:18 -0500
+Started GET "/api/books" for ::1 at 2026-01-29 10:18:37 -0500
+  [1m[35m (26.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240101000000_create_books.rb
+
+
+):
+  
+activerecord (7.2.3) lib/active_record/migration.rb:756:in `check_pending_migrations'
+activerecord (7.2.3) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.3) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.3) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.3) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.2.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.2.3) lib/rails/engine.rb:535:in `call'
+puma (7.2.0) lib/puma/configuration.rb:296:in `call'
+puma (7.2.0) lib/puma/request.rb:103:in `block in handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in `with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in `handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in `process_client'
+puma (7.2.0) lib/puma/server.rb:262:in `block in run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in `block in spawn_thread'
+Started GET "/api/books" for ::1 at 2026-01-29 10:18:39 -0500
+Started GET "/api/books" for ::1 at 2026-01-29 10:18:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240101000000_create_books.rb
+
+
+):
+  
+activerecord (7.2.3) lib/active_record/migration.rb:756:in `check_pending_migrations'
+activerecord (7.2.3) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.3) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.3) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.3) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.2.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.2.3) lib/rails/engine.rb:535:in `call'
+puma (7.2.0) lib/puma/configuration.rb:296:in `call'
+puma (7.2.0) lib/puma/request.rb:103:in `block in handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in `with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in `handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in `process_client'
+puma (7.2.0) lib/puma/server.rb:262:in `block in run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in `block in spawn_thread'
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 1 pending migration:
+
+db/migrate/20240101000000_create_books.rb
+
+
+):
+  
+activerecord (7.2.3) lib/active_record/migration.rb:756:in `check_pending_migrations'
+activerecord (7.2.3) lib/active_record/migration.rb:663:in `block (2 levels) in call'
+activesupport (7.2.3) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.2.3) lib/active_record/migration.rb:668:in `block in call'
+activerecord (7.2.3) lib/active_record/migration.rb:660:in `synchronize'
+activerecord (7.2.3) lib/active_record/migration.rb:660:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (7.2.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.2.3) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (7.2.3) lib/rails/rack/logger.rb:41:in `call_app'
+railties (7.2.3) lib/rails/rack/logger.rb:29:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/request_id.rb:33:in `call'
+rack (3.2.4) lib/rack/runtime.rb:24:in `call'
+activesupport (7.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.2.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.4) lib/rack/sendfile.rb:131:in `call'
+actionpack (7.2.3) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (7.2.3) lib/rails/engine.rb:535:in `call'
+puma (7.2.0) lib/puma/configuration.rb:296:in `call'
+puma (7.2.0) lib/puma/request.rb:103:in `block in handle_request'
+puma (7.2.0) lib/puma/thread_pool.rb:355:in `with_force_shutdown'
+puma (7.2.0) lib/puma/request.rb:102:in `handle_request'
+puma (7.2.0) lib/puma/server.rb:503:in `process_client'
+puma (7.2.0) lib/puma/server.rb:262:in `block in run'
+puma (7.2.0) lib/puma/thread_pool.rb:182:in `block in spawn_thread'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5910840832348281585)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (9.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (5.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2026-01-29 15:19:07.115486', '2026-01-29 15:19:07.115498') RETURNING "key"[0m
+Migrating to CreateBooks (20240101000000)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (20.7ms)[0m  [1m[35mCREATE TABLE "books" ("id" bigserial primary key, "title" character varying NOT NULL, "author" character varying NOT NULL, "genre" character varying NOT NULL, "year" integer NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE INDEX "index_books_on_genre" ON "books" ("genre")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240101000000') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(5910840832348281585)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/books" for ::1 at 2026-01-29 10:19:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (135.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 188ms (Views: -0.7ms | ActiveRecord: 141.2ms (1 query, 0 cached) | GC: 22.1ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (12.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mBook Load (6.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (9.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Pragmatic Programmer"], ["author", "Hunt & Thomas"], ["genre", "Technical"], ["year", 1999], ["created_at", "2026-01-29 15:19:32.244729"], ["updated_at", "2026-01-29 15:19:32.244729"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (3.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Clean Code"], ["author", "Robert Martin"], ["genre", "Technical"], ["year", 2008], ["created_at", "2026-01-29 15:19:32.256381"], ["updated_at", "2026-01-29 15:19:32.256381"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (10.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Designing Data-Intensive Applications"], ["author", "Martin Kleppmann"], ["genre", "Technical"], ["year", 2017], ["created_at", "2026-01-29 15:19:32.261210"], ["updated_at", "2026-01-29 15:19:32.261210"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (8.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Refactoring"], ["author", "Martin Fowler"], ["genre", "Technical"], ["year", 1999], ["created_at", "2026-01-29 15:19:32.281208"], ["updated_at", "2026-01-29 15:19:32.281208"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Domain-Driven Design"], ["author", "Eric Evans"], ["genre", "Technical"], ["year", 2003], ["created_at", "2026-01-29 15:19:32.292870"], ["updated_at", "2026-01-29 15:19:32.292870"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (5.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (6.8ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Structure and Interpretation of Computer Programs"], ["author", "Abelson & Sussman"], ["genre", "Technical"], ["year", 1985], ["created_at", "2026-01-29 15:19:32.296274"], ["updated_at", "2026-01-29 15:19:32.296274"]]
+  [1m[36mTRANSACTION (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (2.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Introduction to Algorithms"], ["author", "Cormen et al."], ["genre", "Technical"], ["year", 1990], ["created_at", "2026-01-29 15:19:32.311169"], ["updated_at", "2026-01-29 15:19:32.311169"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Code Complete"], ["author", "Steve McConnell"], ["genre", "Technical"], ["year", 1993], ["created_at", "2026-01-29 15:19:32.317375"], ["updated_at", "2026-01-29 15:19:32.317375"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.1ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Phoenix Project"], ["author", "Gene Kim"], ["genre", "Fiction"], ["year", 2013], ["created_at", "2026-01-29 15:19:32.320124"], ["updated_at", "2026-01-29 15:19:32.320124"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (14.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Unicorn Project"], ["author", "Gene Kim"], ["genre", "Fiction"], ["year", 2019], ["created_at", "2026-01-29 15:19:32.322640"], ["updated_at", "2026-01-29 15:19:32.322640"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Cryptonomicon"], ["author", "Neal Stephenson"], ["genre", "Fiction"], ["year", 1999], ["created_at", "2026-01-29 15:19:32.338352"], ["updated_at", "2026-01-29 15:19:32.338352"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Snow Crash"], ["author", "Neal Stephenson"], ["genre", "Fiction"], ["year", 1992], ["created_at", "2026-01-29 15:19:32.340931"], ["updated_at", "2026-01-29 15:19:32.340931"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.0ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Ready Player One"], ["author", "Ernest Cline"], ["genre", "Fiction"], ["year", 2011], ["created_at", "2026-01-29 15:19:32.343365"], ["updated_at", "2026-01-29 15:19:32.343365"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Lean Startup"], ["author", "Eric Ries"], ["genre", "Business"], ["year", 2011], ["created_at", "2026-01-29 15:19:32.346267"], ["updated_at", "2026-01-29 15:19:32.346267"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (7.4ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Zero to One"], ["author", "Peter Thiel"], ["genre", "Business"], ["year", 2014], ["created_at", "2026-01-29 15:19:32.348833"], ["updated_at", "2026-01-29 15:19:32.348833"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Good to Great"], ["author", "Jim Collins"], ["genre", "Business"], ["year", 2001], ["created_at", "2026-01-29 15:19:32.357965"], ["updated_at", "2026-01-29 15:19:32.357965"]]
+  [1m[36mTRANSACTION (10.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (5.6ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Innovator's Dilemma"], ["author", "Clayton Christensen"], ["genre", "Business"], ["year", 1997], ["created_at", "2026-01-29 15:19:32.370527"], ["updated_at", "2026-01-29 15:19:32.370527"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Site Reliability Engineering"], ["author", "Google SRE Team"], ["genre", "DevOps"], ["year", 2016], ["created_at", "2026-01-29 15:19:32.377913"], ["updated_at", "2026-01-29 15:19:32.377913"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (0.7ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The DevOps Handbook"], ["author", "Kim et al."], ["genre", "DevOps"], ["year", 2016], ["created_at", "2026-01-29 15:19:32.380175"], ["updated_at", "2026-01-29 15:19:32.380175"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.2ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Accelerate"], ["author", "Forsgren et al."], ["genre", "DevOps"], ["year", 2018], ["created_at", "2026-01-29 15:19:32.382118"], ["updated_at", "2026-01-29 15:19:32.382118"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("title", "author", "genre", "year", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Continuous Delivery"], ["author", "Humble & Farley"], ["genre", "DevOps"], ["year", 2010], ["created_at", "2026-01-29 15:19:32.385527"], ["updated_at", "2026-01-29 15:19:32.385527"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mBook Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  [1m[36mBook Pluck (0.3ms)[0m  [1m[34mSELECT DISTINCT "books"."genre" FROM "books"[0m
+Started GET "/api/books" for ::1 at 2026-01-29 10:19:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (114.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 169ms (Views: 11.9ms | ActiveRecord: 141.6ms (1 query, 0 cached) | GC: 17.6ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 10:20:04 -0500
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (36.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 72ms (Views: 31.4ms | ActiveRecord: 36.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 10:20:04 -0500
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 11:16:44 -0500
+Started GET "/api/books" for ::1 at 2026-01-29 11:16:44 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (7.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::BooksController#index as */*
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (144.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mBook Load (137.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 204ms (Views: 5.7ms | ActiveRecord: 175.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 203ms (Views: 18.5ms | ActiveRecord: 155.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 11:16:48 -0500
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (12.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 18ms (Views: 4.8ms | ActiveRecord: 12.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 11:20:36 -0500
+Started GET "/api/books" for ::1 at 2026-01-29 11:20:36 -0500
+Processing by Api::BooksController#index as */*
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (30.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mBook Load (44.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 49ms (Views: 18.6ms | ActiveRecord: 30.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 84ms (Views: 37.0ms | ActiveRecord: 44.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 11:22:08 -0500
+Started GET "/api/books" for ::1 at 2026-01-29 11:22:08 -0500
+Processing by Api::BooksController#index as */*
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (15.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  [1m[36mBook Load (13.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 25ms (Views: 9.5ms | ActiveRecord: 15.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Completed 200 OK in 24ms (Views: 10.3ms | ActiveRecord: 13.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 11:55:42 -0500
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (511.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 1051ms (Views: 478.5ms | ActiveRecord: 547.0ms (1 query, 0 cached) | GC: 65.2ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 12:06:12 -0500
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (233.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 272ms (Views: 4.4ms | ActiveRecord: 263.7ms (1 query, 0 cached) | GC: 3.3ms)
+
+
+Started GET "/api/books" for ::1 at 2026-01-29 12:08:16 -0500
+Processing by Api::BooksController#index as */*
+  [1m[36mBook Load (46.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/api/books_controller.rb:11:in `index'
+Completed 200 OK in 73ms (Views: 25.1ms | ActiveRecord: 46.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
